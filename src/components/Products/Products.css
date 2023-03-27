@@ -1,0 +1,41 @@
+.product{
+    width: 300px;
+    height: 510px;
+    border: 2px solid red;
+    border-radius: 8px;
+    position: relative;
+}
+.product img{
+    width: 290px;
+    height: 290px;
+    margin: 7px;
+    border-radius: 8px;
+}
+
+.product-name{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: 'lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.0015rem;
+}
+
+.product-info{
+    margin-left: 14px;
+
+}
+.product-info p{
+    margin-top: 5px;
+}
+.btn-card{
+    width: 100%;
+    background-color: rgb(240, 190, 99);
+    position: absolute;
+    bottom: 0;
+}
+.btn-card:hover{
+    background-color: orange;
+}
