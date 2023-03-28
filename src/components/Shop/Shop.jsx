@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { addToDb, getShoppingCard } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
@@ -13,10 +14,26 @@ const Shop = () => {
             .then(data => setProducts(data))
     }, []);
 
+    useEffect(() => {
+        const strodCard = getShoppingCard();
+        const saveCard = [];
+        for(const id in strodCard){
+            const addedProduct = products.find(pro => pro.id === id)
+           if(addedProduct){
+            const quantity  = strodCard[id];
+            addedProduct.quantity = quantity;
+            saveCard.push(addedProduct)
+           }
+           console.log('added product ', addedProduct)
+        }
+        setCart(saveCard)
+    }, [products])
+
     const handleAddToCart = (product) => {
         // cart.push(product); 
         const newCart = [...cart, product];
         setCart(newCart);
+        addToDb(product.id)
     }
 
     return (
@@ -24,6 +41,7 @@ const Shop = () => {
             <div className="products-container">
                 {
                     products.map(product => <Product
+
                         key={product.id}
                         product={product}
                         handleAddToCart={handleAddToCart}
@@ -32,7 +50,7 @@ const Shop = () => {
             </div>
             <div className="cart-container">
                 <Cart
-                cart = {cart}
+                    cart={cart}
                 ></Cart>
             </div>
         </div>
