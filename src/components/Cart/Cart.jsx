@@ -4,6 +4,7 @@ import { faBookmark, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 const Cart = (props) => {
     const { name, id, img,img2,time } = props.myValue;
+    const {AddButton} = props;
     return (
         <div className='p-3 rounded-xl border-2 m-2 border-red-400'>
             <img className='w-4/4 rounded-xl' src={img} alt="" />
@@ -23,7 +24,7 @@ const Cart = (props) => {
             <h2 className='text-3xl font-semibold mb-3 mt-11
             '>How to get your first job as a self-taught programmer</h2>
             <h1>#Begginer #Programing</h1>
-            <a className='text-blue-700 underline' href="">Marks as read </a>
+            <h2 onClick={()=>AddButton(time)} className='text-blue-700 underline' >Marks as read </h2>
         </div>
     );
 };
