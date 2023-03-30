@@ -1,18 +1,13 @@
 import React from 'react';
-import './Header.css';
-import logo from '../../images/Logo.svg';
 
 const Header = () => {
     return (
-        <nav className='header'>
-            <img src={logo} alt="" />
-            <div>
-                <a href="/shop">Shop</a>
-                <a href="/order">Orders</a>
-                <a href="/inventory">Inventory</a>
-                <a href="/login">Login</a>
-            </div>
-        </nav>
+        <div className='bg-lime-300 rounded-xl p-2 pl-5 pr-5 flex justify-between items-center'>
+            <h3 className='text-4xl font-semibold'>Knowledge Cafe</h3>
+            
+                <img className='w-[80px] h-[80px] rounded-full' src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" />
+            
+        </div>
     );
 };
 

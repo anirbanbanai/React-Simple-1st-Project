@@ -1,0 +1,34 @@
+[
+    {
+      "id": "6425a8217e0e92922e7045bd",
+      "img": "https://images.unsplash.com/photo-1672307974995-cd253f7f7eeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "name": "Anirban Banai",
+      "img2":"https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80",
+      "title":"How to get your first job as a self-taught programmer",
+      "time":"5"
+    },
+    {
+      "id": "6425a8219c026fe8065ec5d6",
+      "img": "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "name": "Rupo Banai",
+      "img2":"https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=461&q=80",
+      "title":"",
+      "time":"15"
+    },
+    {
+      "id": "6425a821d1e6f9bb37d6e466",
+      "img": "https://media.istockphoto.com/id/1306835227/photo/young-business-people-are-working-together-to-analyze-the-current-business-in-which-direction.jpg?s=1024x1024&w=is&k=20&c=1zxjbqjJfuzztvvUVI88qvcxYS__5IPLDRKG4Jlr1Tk=",
+      "name": "Manjoli Banai",
+      "img2":"https://plus.unsplash.com/premium_photo-1671823917954-dc943c1bd9df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "title":"",
+      "time":"12"
+    },
+    {
+      "id": "6425a8214e1b2f279334b76c",
+      "img": "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "name": "Pompi Banai",
+      "img2":"https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+      "title":"",
+      "time":"3"
+    }
+  ]
