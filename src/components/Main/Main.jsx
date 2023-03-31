@@ -33,7 +33,7 @@ const Main = () => {
                     ></Cart>)
                 }
             </div>
-            <div className=' mt-4'>
+            <div className='bg-slate-300 rounded-xl mt-4'>
                 <h2 className='text-3xl font-semibold rounded-xl p-4 bg-stone-200'>Spent time on read : {setTimeTotal} min</h2>
                 <div >
                     <h2 className='text-4xl font-bold'>Bookmark Blog : { }</h2>
