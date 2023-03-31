@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
-import Sidebar from '../Sidebar/Sidebar';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Main = () => {
     const [data, setData] = useState([]);
@@ -12,9 +12,15 @@ const Main = () => {
             .then(data => setData(data))
     }, []);
 
+ 
+    function add(){
+        toast("woo so fancy")
+    }
+
     const AddButton = (time) => {
         const newTime = [...timeValue, time];
         setTimevalue(newTime);
+
     };
 
     let setTimeTotal = 0;
@@ -22,15 +28,10 @@ const Main = () => {
         setTimeTotal = setTimeTotal + parseInt(time);
     };
 
-
     const AddBookMark = (title) => {
         setBookmarks([...bokkmark, title])
-
-
     }
-    console.log(bokkmark)
-    const newtt = [...bokkmark];
-    // console.log(newtt)
+
 
     return (
         <div className='grid md:grid-cols-3 gap-4'>
@@ -44,14 +45,13 @@ const Main = () => {
                     ></Cart>)
                 }
             </div>
-            <div className='bg-slate-300 p-6 rounded-xl mt-4'>
+            <div className='bg-fuchsia-400 p-6 rounded-xl mt-4'>
                 <h2 className='text-3xl font-semibold rounded-xl p-4 bg-stone-200'>Spent time on read : {setTimeTotal} min</h2>
                 <div >
-                    <h2 className='text-4xl font-bold mt-5 mb-4'>Bookmark Blog : {}</h2>
-{
-    bokkmark.map(m=> <div className='bg-yellow-300 p-3  font-bold mb-3 rounded-xl border-2 border-purple-600' key={m.id} >  {m.title} </div> )
-}
-                    {/* <Sidebar bokkmark={bokkmark}></Sidebar> */}
+                    <h2 className='text-4xl font-bold mt-5 mb-4'>Bookmark Blog : {bokkmark.length}</h2>
+                    {
+                        bokkmark.map(m => <div className='bg-white p-3  font-bold mb-3 rounded-xl border-2 border-purple-600' key={m.id} >  {m.title} </div>)
+                    }
                 </div>
             </div>
         </div>
