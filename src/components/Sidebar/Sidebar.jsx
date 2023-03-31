@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-const Sidebar = (props) => {
-    console.log(props.bokkmark);
-    let my = props.bokkmark;
+const Sidebar = ({bokkmark} ) => {
+    const [titlee , getTitle] = useState(bokkmark);
+    useEffect(()=>{
+        const getTitlefromStrg = localStorage.getItem('old-title');
+       getTitle(getTitlefromStrg)
+    },[bokkmark])
     return (
         <div >
-            
+          
         </div>
     );
 };
