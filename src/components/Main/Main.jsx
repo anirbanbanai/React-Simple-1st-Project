@@ -12,10 +12,6 @@ const Main = () => {
             .then(data => setData(data))
     }, []);
 
- 
-    function add(){
-        toast("woo so fancy")
-    }
 
     const AddButton = (time) => {
         const newTime = [...timeValue, time];
@@ -30,6 +26,7 @@ const Main = () => {
 
     const AddBookMark = (title) => {
         setBookmarks([...bokkmark, title])
+        
     }
 
 
