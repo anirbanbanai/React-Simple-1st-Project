@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 const Cart = (props) => {
-    const { name, id, img,img2,time } = props.myValue;
-    const {AddButton} = props;
+    const { name, id, img,img2,time,title } = props.myValue;
+    const {AddButton , AddBookmark} = props;
     return (
-        <div className='p-3 rounded-xl border-2 m-2 border-red-400'>
+        <div className='p-3 text-start rounded-xl border-2 m-2 border-red-400'>
             <img className='w-4/4 rounded-xl' src={img} alt="" />
             <div className='flex justify-between'>
                 <div className='flex justify-between'>
@@ -16,15 +16,20 @@ const Cart = (props) => {
                         <h3 className='font-bold ml-2 mt-2'>March 14 (4 days ago)</h3>
                     </div>
                 </div>
-                <div className='flex mt-2'>
-                    <h2 className='font-bold mr-3 mt-3'>{time} min read  </h2>
-                    <span><svg className='w-[20px] mt-3' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M0 48C0 21.5 21.5 0 48 0l0 48V441.4l130.1-92.9c8.3-6 19.6-6 27.9 0L336 441.4V48H48V0H336c26.5 0 48 21.5 48 48V488c0 9-5 17.2-13 21.3s-17.6 3.4-24.9-1.8L192 397.5 37.9 507.5c-7.3 5.2-16.9 5.9-24.9 1.8S0 497 0 488V48z"/></svg></span>
+                <div className='flex mt-2 gap-1'>
+                    <h2 className='font-bold mt-5 '>{time} min read  </h2>
+                    <button onClick={AddBookmark}>
+                       <div className='flex gap-1'>
+                       <svg className='w-[20px] ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M0 48C0 21.5 21.5 0 48 0l0 48V441.4l130.1-92.9c8.3-6 19.6-6 27.9 0L336 441.4V48H48V0H336c26.5 0 48 21.5 48 48V488c0 9-5 17.2-13 21.3s-17.6 3.4-24.9-1.8L192 397.5 37.9 507.5c-7.3 5.2-16.9 5.9-24.9 1.8S0 497 0 488V48z"/></svg>
+                        <svg className='w-[20px]' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg>
+                       </div>
+                        </button>
                 </div>
             </div>
             <h2 className='text-3xl font-semibold mb-3 mt-11
-            '>How to get your first job as a self-taught programmer</h2>
+            '>How to get your first job as a self- <br /> taught programmer</h2>
             <h1>#Begginer #Programing</h1>
-            <h2 onClick={()=>AddButton(time)} className='text-blue-700 underline' >Marks as read </h2>
+            <button onClick={()=>AddButton(time)} className='text-blue-700 underline' >Marks as read </button>
         </div>
     );
 };
