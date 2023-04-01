@@ -5,7 +5,9 @@ import { ToastContainer, toast } from 'react-toastify';
 const Main = () => {
     const [data, setData] = useState([]);
     const [timeValue, setTimevalue] = useState([]);
-    const [bokkmark, setBookmarks] = useState([])
+    const [bokkmark, setBookmarks] = useState([]);
+    const [isread , setIsread] = useState(false);
+
     useEffect(() => {
         fetch('pub.json')
             .then(res => res.json())
@@ -25,9 +27,27 @@ const Main = () => {
     };
 
     const AddBookMark = (title) => {
-        setBookmarks([...bokkmark, title])
-        
+
+        let aarray = [...bokkmark, title]
+        setBookmarks(aarray);
+        if(isread){
+            toast('You allready bookmarklede')
+        }
+        else{
+            setIsread(true)
+        }
+
     }
+
+    // const HandleBookmark = ()=>{
+    //     if(isread){
+    //         toast('You bare allready as read')
+    //     }
+    //     else{
+    //         // addData(props.AddBookMark);
+    //         setIsread(true)
+    //     }
+    // }
 
 
     return (

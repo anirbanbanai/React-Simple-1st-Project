@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark, faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { ToastContainer, toast } from 'react-toastify';
 
-function addE(){
-    toast("woo so fancy")
-}
-
 const Cart = (props) => {
     const { name, id, img, img2, time, title } = props.myValue;
     const { AddButton, AddBookMark } = props;
+
+
+
     return (
         <div className='p-3 text-start rounded-xl border-2 m-2 border-red-400'>
             <img className='w-4/4 rounded-xl' src={img} alt="" />
