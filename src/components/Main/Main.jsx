@@ -6,7 +6,13 @@ const Main = () => {
     const [data, setData] = useState([]);
     const [timeValue, setTimevalue] = useState([]);
     const [bokkmark, setBookmarks] = useState([]);
-    const [isread , setIsread] = useState(false);
+    const [isread, setIsread] = useState(false);
+
+    const AddBookMark = (title) => {
+        let aarray = [...bokkmark, title]
+        setBookmarks(aarray);
+        
+    }
 
     useEffect(() => {
         fetch('pub.json')
@@ -25,29 +31,6 @@ const Main = () => {
     for (let time of timeValue) {
         setTimeTotal = setTimeTotal + parseInt(time);
     };
-
-    const AddBookMark = (title) => {
-
-        let aarray = [...bokkmark, title]
-        setBookmarks(aarray);
-        if(isread){
-            toast('You allready bookmarklede')
-        }
-        else{
-            setIsread(true)
-        }
-
-    }
-
-    // const HandleBookmark = ()=>{
-    //     if(isread){
-    //         toast('You bare allready as read')
-    //     }
-    //     else{
-    //         // addData(props.AddBookMark);
-    //         setIsread(true)
-    //     }
-    // }
 
 
     return (
