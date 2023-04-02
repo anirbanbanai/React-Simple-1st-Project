@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "Basic",
+        "price": 50,
+        "features": [
+            "Cardio & weights",
+            "Locker room"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Premium",
+        "price": 75,
+        "features": [
+            "Cardio & weights",
+            "Locker room",
+            "Unlimited classes",
+            "Personal training"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Platinum",
+        "price": 100,
+        "features": [
+            "Cardio & weights",
+            "Locker room",
+            "Unlimited classes",
+            "Personal training",
+            "Sauna & steam room"
+        ]
+    }
+]
